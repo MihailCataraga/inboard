@@ -1,0 +1,114 @@
+.product{
+    background-color: $color;
+    .sec-1{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 5vw;
+        h1{
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 50px;
+            color: $bgColor;
+        }
+        .subsec-1{
+            display: flex;
+            justify-content: space-around;
+            gap: 50px;
+            img{
+                width: 500px;
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                margin-top: 100px;
+                p{
+                    max-width: 800px;
+                    font-size: 22px;
+                    line-height: 1.5;
+                    color: $bgColor;
+                }
+                .price{
+                    margin: 10px 0;
+                }
+                .buy{
+                display: flex;
+                align-items: center;
+                    .icon{
+                        font-size: 22px;
+                        margin: 10px;
+                        color: $bgColor;
+                        transition: .5s;
+                    }
+                    .icon:hover{
+                        color: $secColor;
+                    }
+                    p{
+                        font-size: 22px;   
+                        color: $bgColor;
+                    }
+                    button{
+                        font-size: 22px;
+                        color: $bgColor;
+                        transition: .5s;
+                        border: 2px solid $bgColor;
+                        border-radius: 10px;
+                        padding: 2px 8px;
+                        background-color: transparent;
+                        .icon{
+                            margin: 0;
+                            margin-left: 5px;
+                            color: $bgColor;
+                        }
+                    }
+                    button:hover{
+                        color: $secColor;
+                        border: 2px solid $secColor;
+                        .icon{
+                            color: $secColor;
+                        }
+                    }
+                }
+                .success{
+                    color: $secColor;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product{
+        .sec-1{
+            .subsec-1{
+                align-items: center;
+                img{
+                    height: 50vw;
+                }
+                .right{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .product{
+        .sec-1{
+            .subsec-1{
+                align-items: center;
+                flex-direction: column;
+                img{
+                    width: 300px;
+                    height: auto;
+                }
+                .right{
+                    margin: 0;
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

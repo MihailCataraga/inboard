@@ -1,0 +1,256 @@
+.navbar {
+    padding: 10px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bgColor;
+    border-bottom: 2px solid $secColor;
+    position: relative;
+    .logo {
+        padding: 10px 0;
+        text-decoration: none;
+
+        p {
+            font-size: 32px;
+            font-weight: 600;
+            color: $color;
+            cursor: pointer;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: $color;
+            font-size: 18px;
+            transition: .5s;
+            position: relative;
+        }
+
+        .active{
+            color: $secColor;
+        }
+
+        a:hover {
+            color: $secColor;
+        }
+        button{
+            margin: 0 10px;
+            display: flex;
+            position: relative;
+            background-color: transparent;
+            border: none;
+            color: $color;
+            .icon {
+                display: initial;
+                font-size: 24px;
+            }
+            .orders{
+                background-color: $secColor;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                font-size: 14px;
+                padding: 0 5px;
+                border-radius: 10px;
+            }
+        }
+        button:hover{
+            color: $secColor;
+            .orders{
+                color: $color;
+            }
+        }
+    }
+
+    .miniMenu {
+        display: none;
+    }
+
+    .miniMenuLinks{
+        display: none;
+    }
+    .cartBox{
+        width: 400px;
+        min-height: 350px;
+        background-color: $secBg;
+        border: 2px solid $secColor;
+        border-top: none;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        .closeCart{
+            display: flex;
+            justify-content: flex-end;
+            .icon{
+                font-size: 32px;
+                margin: 10px 15px;
+                color: $color;
+                cursor: pointer;
+            }
+            .icon:hover{
+                color: $secColor;
+            }
+        }
+        .productList{
+            display: flex;
+            padding: 0 25px;
+            align-items: center;
+            justify-content: space-around;
+            img{
+                width: 80px;
+            }
+            .infoProduct{
+                h2{
+                    font-size: 20px;
+                    max-width: 200px;
+                    color: $color;
+                }
+                .amount{
+                    display: flex;
+                    align-items: center;
+                    .icon{
+                        margin: 0 10px;
+                        font-size: 18px;
+                        color: $color;
+                        transition: .5s;
+                    }
+                    .icon:hover{
+                        color: $secColor;
+                    }
+                    p{
+                        font-size: 18px;
+                        color: $color;
+                    }
+                }
+            }
+        }
+        .total{
+            margin-top: 50px;
+            hr{
+                margin: 20px 20px;
+                border: none;
+                border-top: 2px solid $color;
+            }
+            p{
+                color: $color;
+                font-size: 14px;
+                margin: 10px 20px;
+            }
+            .totalToPay{
+                color: $color;
+                font-size: 20px;
+            }
+            button{
+                color: $color;
+                background-color: transparent;
+                border: 2px solid $secColor;
+                border-radius: 25px;
+                font-size: 18px;
+                padding: 5px 0;
+                width: 50%;
+                transform: translate(50%);
+                margin: 20px 0;
+                transition: .5s;
+            }
+            button:hover{
+                color: $secColor;
+            }
+        }
+        .empty{
+            text-align: center;
+            color: $color;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: '600px') {
+    .navbar {
+        padding: 10px 8vw;
+        position: relative;
+        .logo{
+            p{
+                font-size: 26px;
+            }
+        }
+        nav {
+            display: none;
+        }
+
+        .miniMenu {
+            display: initial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            .icon{
+                display: initial;
+                color: $color;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .miniCart{
+                background-color: transparent;
+                border: none;
+                display: initial;
+                position: relative;
+                .icon{
+                    display: initial;
+                    color: $color;
+                    font-size: 24px;
+                    cursor: pointer;
+                } 
+                .orders{
+                    background-color: $secColor;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    font-size: 14px;
+                    padding: 0 5px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .miniMenuLinks{
+            display: initial;
+            position: absolute;
+            top: 71px;
+            right: 0px;
+            border-left: 2px solid $secColor;
+            border-bottom: 2px solid $secColor;
+            background-color: $bgColor;
+            border-radius: 0 0 0 10px;
+            nav{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                gap: 5px;
+                a{
+                    color: $color;
+                }
+                .active{
+                    color: $secColor;
+                }
+            }
+        }
+        .cartBox{
+            width: 100%;
+            top: 73px;
+        }
+    }
+}
+
+@keyframes cart {
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}

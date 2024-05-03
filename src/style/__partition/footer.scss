@@ -1,0 +1,49 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgColor;
+    padding: 25px 5vw;
+    border-top: 2px solid $secColor;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 200px;
+        padding-bottom: 25px;
+        .logo{
+            display: flex;
+            p{
+                text-align: center;
+                font-size: 32px;
+                font-weight: 600;
+                color: $color;
+            }
+        }
+        .info{
+            display: flex;
+            p{
+                text-align: center;
+                font-size: 18px;
+                max-width: 300px;
+                color: $color;
+            }
+        }
+    }
+    .bottom{
+        display: flex;
+        justify-content: center;
+        p{
+            color: $color;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer{
+        .top{
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+}

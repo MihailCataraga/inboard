@@ -1,0 +1,459 @@
+.home{
+    main{
+        .sec-1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 2vw;
+            gap: 150px;
+            background: linear-gradient(315deg, #515152 60%, #f8f8f8 40%);
+            .left{
+                flex: 1;
+                margin-left: 5vw;
+                margin-top: 50px;
+                img{
+                    width: 500px;
+                    animation: mainImg 2s linear;
+                }
+            }
+            .right{
+                flex: 1;
+                .first{
+                    font-size: 56px;
+                    color: $color;
+                    margin-bottom: 20px;
+                }
+                .second{
+                    font-size: 56px;
+                    color: $color;
+                    margin-bottom: 20px;
+                    margin-left: -50px;
+                }
+                h1{
+                    font-size: 28px;
+                    max-width: 550px;
+                    margin-left: -100px;
+                    margin-bottom: 20px;
+                    color: $color;
+                }
+                a{
+                    margin-left: -150px;
+                    background-color: $secColor;
+                    padding: 10px 15px;
+                    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        font-size: 20px;
+                        padding: 25px;
+                        cursor: pointer;
+                        color: $color;
+                    }
+                }
+                a:hover{
+                    transition: .5s;
+                    background-color: $color;
+                    button{
+                        color: $secColor;
+                    }
+                }
+            }
+        }
+        .sec-2{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 25px 0;
+            background-color: $color;
+            .info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px 0;
+                animation: info 2s linear;
+                .icon{
+                    font-size: 42px;
+                    margin-bottom: 15px;
+                    color: $bgColor;
+                }
+                p{
+                    font-size: 20px;
+                    color: $bgColor;
+                }
+            }
+        }
+        .sec-3{
+            display: flex;
+            overflow-x: hidden;
+            background: linear-gradient(225deg, rgba(81,81,82,1) 45%, rgba(248,248,248,1) 45%);
+            .left{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h2{
+                    font-size: 42px;
+                    margin-bottom: 10px;
+                    color: $bgColor;
+                }
+                p{
+                    font-size: 22px;
+                    max-width: 500px;
+                    line-height: 1.5;
+                    text-align: center;
+                    color: $bgColor;
+                }
+            }
+            .right{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    margin-left: -10vw;
+                    margin-right: -1500px;
+                }
+            }
+        }
+        .sec-4{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+            padding: 25px 0;
+            background: linear-gradient(225deg, rgba(248,248,248,1) 60%, rgba(81,81,82,1) 60%);
+            .left{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    margin-right: -10vw;
+                    margin-left: -1700px;
+                }
+            }
+            .right{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p{
+                    font-size: 22px;
+                    max-width: 500px;
+                    line-height: 1.5;
+                    text-align: center;
+                    color: $bgColor;
+                }
+            }
+        }
+        .sec-5{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+            overflow-x: hidden;
+            gap: 50px;
+            background: linear-gradient(315deg, rgba(81,81,82,1) 28%, rgba(248,248,248,1) 28%, rgba(248,248,248,1) 72%, rgba(81,81,82,1) 72%);
+            .left{
+                flex: 1;
+                img{
+                    width: 22vw;
+                    margin-left: -1000px;
+                }
+            }
+            .center{
+                flex: 1;
+                p{
+                    font-size: 22px;
+                    max-width: 25vw;
+                    line-height: 1.5;
+                    text-align: center;
+                    color: $bgColor;
+                }
+            }
+            .right{
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                img{
+                    width: 22vw;
+                    margin-right: -1000px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes mainImg {
+    from{
+        margin-left: -700px;
+    }
+    to{
+        margin-left: 0px;
+    }
+}
+
+@keyframes info {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes theGlider {
+    from{
+        margin-right: -1500px;
+    }
+    to{
+        margin-right: 0px;
+    }
+}
+
+@keyframes closed {
+    from {
+        margin-left: -1700px;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+@keyframes suspension {
+    from {
+        margin-left: -1000px;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+@keyframes wheel {
+    from {
+        margin-right: -1000px;
+    }
+    to{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home{
+        main{
+            .sec-1{
+                gap: 50px;
+                .left{
+                    flex: 1.3;
+                    img{
+                        width: 300px;
+                    }
+                }
+                .right{
+                    flex: 1;
+                    .first{
+                        font-size: 26px;
+                    }
+                    .second{
+                        font-size: 26px;
+                    }
+                    h1{
+                        font-size: 20px;
+                    }
+                    a{
+                        margin-left: -50px;
+                        button{
+                            font-size: 18px;
+                            
+                        }
+                    }
+                }
+            }
+            .sec-2{
+                gap: 10px;
+                .info{
+                    p{
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+            }
+            .sec-3{
+                .left{
+                    h2{
+                        font-size: 26px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                }
+                .right{
+                    img{
+                        width: 300px;
+                    }
+                }
+            }
+            .sec-4{
+                .left{
+                    img{
+                        width: 300px;
+                    }
+                }
+                .right{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .sec-5{
+                // flex-wrap: wrap;
+                flex-direction: column;
+                .left{
+                    img{
+                        width: 300px;
+                    }
+                }
+                .center{
+                    p{
+                        font-size: 18px;
+                        max-width: 300px;
+                    }
+                }
+                .right{
+                    img{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .home{
+        main{
+            .sec-1{
+                gap: 50px;
+                flex-direction: column;
+                .left{
+                    flex: 1.3;
+                    img{
+                        width: 300px;
+                    }
+                }
+                .right{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .first{
+                        font-size: 26px;
+                        margin: 0;
+                        text-align: center;
+                    }
+                    .second{
+                        font-size: 26px;
+                        margin: 0;
+                        text-align: center;
+                    }
+                    h1{
+                        font-size: 20px;
+                        text-align: center;
+                        margin: 10px 0;
+                    }
+                    a{
+                        margin: 0 25px;
+                        width: 40%;
+                        left: 50%;
+                        text-align: center;
+                        padding: 10px 15px;
+                        button{
+                            font-size: 18px;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            .sec-2{
+                gap: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                .info{
+                    p{
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+            }
+            .sec-3{
+                display: flex;
+                flex-direction: column;
+                .left{
+                    h2{
+                        font-size: 26px;
+                        margin-top: 25px;
+                        filter: brightness(0) invert(1);
+                        color: $secBg;
+                        mix-blend-mode: difference;
+                    }
+                    p{
+                        filter: brightness(0) invert(1);
+                        color: $secBg;
+                        font-size: 18px;
+                        mix-blend-mode: difference;
+                        padding: 0 10px;
+                    }
+                }
+                .right{
+                    img{
+                        width: 300px;
+                    }
+                }
+            }
+            .sec-4{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                .left{
+                    img{
+                        width: 300px;
+                    }
+                }
+                .right{
+                    p{
+                        filter: brightness(0) invert(1);
+                        color: $secBg;
+                        font-size: 18px;
+                        mix-blend-mode: difference;
+                        padding: 0 10px;
+                    }
+                }
+            }
+            .sec-5{
+                // flex-wrap: wrap;
+                flex-direction: column;
+                .left{
+                    img{
+                        width: 300px;
+                    }
+                }
+                .center{
+                    p{
+                        font-size: 18px;
+                        max-width: 300px;
+                        color: $secBg;
+                        filter: brightness(0) invert(1);
+                        mix-blend-mode: difference;
+                        padding: 0 10px;
+                    }
+                }
+                .right{
+                    img{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}

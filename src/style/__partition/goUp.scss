@@ -1,0 +1,31 @@
+.toUp{
+    position: fixed;
+    display: none;
+    bottom: 25px;
+    right: 25px;
+    background-color: $bgColor;
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: $color;
+    border: 2px solid $secColor;
+    cursor: pointer;
+    z-index: 999;
+    .icon{
+        font-size: 20px;
+    }
+}
+.toUp:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 650px) {
+    .toUp{
+        padding: 8px 10px;
+        bottom: 15px;
+        right: 15px;
+        .icon{
+            font-style: 18px;
+        }
+    }
+}
